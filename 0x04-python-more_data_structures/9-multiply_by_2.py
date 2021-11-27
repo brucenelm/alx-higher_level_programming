@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 def multiply_by_2(a_dictionary):
-    new_dict = {}
-    for key, value in a_dictionary.items():
-        new_dict.update({key: (value * 2)})
-    return new_dict#!/usr/bin/python3
-
-
+    if a_dictionary is not None:
+        dict = {}
+        tmp = {}
+        for key, value in a_dictionary.items():
+            newval = value * 2
+            tmp = {key: newval}
+            dict.update(tmp)
+        return (dict)
+    return None
